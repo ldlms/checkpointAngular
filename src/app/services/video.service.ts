@@ -8,27 +8,27 @@ import { map, Observable } from 'rxjs';
 })
 export class VideoService {
 
-  
-
-  private VideoJsonUrl = "src/assets/jsons/data.json"
+  private VideoJsonUrl = "../assets/jsons/data.json"
 
   constructor(private http: HttpClient) { }
 
-  getVideoList(): Observable<Video[]>{
-    return this.http.get<Video[]>(this.VideoJsonUrl).pipe(
-      map(video => video.map(video => ({...video})))
+  getVideoList(): Observable<Video[]> {
+    return this.http.get<{videos: Video[]}>(this.VideoJsonUrl).pipe(
+      map(response => { 
+        return response.videos;
+      })
     );
   }
 
-  getvideoById(id:number):Observable<Video|undefined>{
-    return this.http.get<Video[]>(this.VideoJsonUrl).pipe(
-      map(video => video.find(video => (video.id === id)))
+  getvideoById(id: number): Observable<Video | undefined> {
+    return this.http.get<{videos: Video[]}>(this.VideoJsonUrl).pipe(
+      map(response => response.videos.find(v => (v.id === id)))
     );
   }
 
-  getBideoByFilter(filter:string):Observable<Video[]|undefined>{
-    return this.http.get<Video[]>(this.VideoJsonUrl).pipe(
-      map(video => video.filter(video => (video.title.includes(filter))))
+  getBideoByFilter(filter: string): Observable<Video[] | undefined> {
+    return this.http.get<{videos: Video[]}>(this.VideoJsonUrl).pipe(
+      map(response => response.videos.filter(v => (v.title.includes(filter))))
     );
   }
 }

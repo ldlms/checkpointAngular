@@ -3,17 +3,17 @@ import { Comments } from "../comments/comments"
 export class Video {
     
     id:number
-    title:String
-    url:String
-    imgSrc:String
-    channelName:String
+    title:string
+    url:string
+    imgSrc:string
+    channelName:string
     likes:number
-    comments:Comments
-    nbViews:String
+    comments:Comments[]
+    nbViews:string
     uploadedDate:String
-    categories:String[]
+    categories:string[]
 
-    constructor(id:number,title:String,url:String,imgSrc:String,channelName:String,likes:number,comments:Comments,nbViews:String,uploadedDate:String,categories:String[]){
+    constructor(id:number,title:string,url:string,imgSrc:string,channelName:string,likes:number,comments:Comments[],nbViews:string,uploadedDate:String,categories:string[]){
         this.id = id
         this.title = title
         this.url = url

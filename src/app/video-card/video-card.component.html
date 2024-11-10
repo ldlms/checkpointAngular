@@ -1,0 +1,9 @@
+<p>{{videoTitle}}</p>
+<p>{{videoUrl}}</p>
+<p>
+    @for(videoComment of videoComments;track $index){
+        <p>{{videoComment.author}}</p>
+        <p>{{videoComment.content}}</p>
+    }
+</p>
+<hr>
