@@ -26,7 +26,7 @@ export class VideoService {
     );
   }
 
-  getBideoByFilter(filter: string): Observable<Video[] | undefined> {
+  getvideoByFilter(filter: string): Observable<Video[]> {
     return this.http.get<{videos: Video[]}>(this.VideoJsonUrl).pipe(
       map(response => response.videos.filter(v => (v.title.includes(filter))))
     );

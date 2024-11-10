@@ -18,7 +18,6 @@ import { VideoDetailsComponent } from './video-details/video-details.component';
     VideoPageComponent,
     VideoComponent,
     ErrorComponent,
-    VideoSearchComponent,
     VideoListComponent,
     VideoCardComponent,
     VideoDetailsComponent
@@ -26,8 +25,9 @@ import { VideoDetailsComponent } from './video-details/video-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    VideoSearchComponent
+],
   providers: [],
   bootstrap: [AppComponent]
 })

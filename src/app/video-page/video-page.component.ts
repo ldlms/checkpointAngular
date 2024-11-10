@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-video-page',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './video-page.component.scss'
 })
 export class VideoPageComponent {
+
+  searchQuery:string = "" 
+
+  searchUpdated(search:string):void{
+    this.searchQuery = search;
+  }
+
 
 }

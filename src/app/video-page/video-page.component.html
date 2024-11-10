@@ -1,2 +1,2 @@
-<app-video-search></app-video-search>
-<app-video-list></app-video-list>
+<app-video-search (eventsearch)="searchUpdated($event)"></app-video-search>
+<app-video-list [searchendpoint]="searchQuery"></app-video-list>

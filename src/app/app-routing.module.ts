@@ -7,8 +7,7 @@ import { VideoCardComponent } from './video-card/video-card.component';
 import { VideoDetailsComponent } from './video-details/video-details.component';
 
 const routes: Routes = [
-  {path:"", component:VideoComponent},
-  {path:"video",component:VideoPageComponent},
+  {path:"",component:VideoPageComponent},
   {path:"video/:id",component:VideoDetailsComponent},
   {path:"**",component:ErrorComponent}
 ];
