@@ -10,6 +10,7 @@ import { ErrorComponent } from './error/error.component';
 import { VideoSearchComponent } from './video-search/video-search.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { VideoCardComponent } from './video-card/video-card.component';
+import { VideoDetailsComponent } from './video-details/video-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { VideoCardComponent } from './video-card/video-card.component';
     ErrorComponent,
     VideoSearchComponent,
     VideoListComponent,
-    VideoCardComponent
+    VideoCardComponent,
+    VideoDetailsComponent
   ],
   imports: [
     BrowserModule,

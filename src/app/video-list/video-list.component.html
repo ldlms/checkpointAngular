@@ -1,6 +1,6 @@
 <div *ngIf="videos | async as videos">
 <div *ngFor="let video of videos">
-    <app-video-card [videoTitle]="video.title" [videoUrl]="video.url" [videoComments]="video.comments"></app-video-card>
+    <app-video-card [videoId]="video.id" [videoTitle]="video.title" [videoUrl]="video.url" [videoComments]="video.comments"></app-video-card>
 </div>
 </div>
 
