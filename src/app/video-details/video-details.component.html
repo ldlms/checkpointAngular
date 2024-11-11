@@ -4,7 +4,15 @@
 <p>{{video.url}}</p>
 <img src="{{video.imgSrc}}">
 <p>LIkes : {{video.likes}}</p>
-<ul></ul>
+@if(video.comments.length != 0){
+    <hr>
+    <ul *ngFor="let comment of video.comments">
+        <li>Commentaire : {{comment.content}}</li>
+        <li>De : {{comment.author}}</li>
+    </ul>
+}@else{
+<p>Aucun commentaire ici !</p>
+}
 <p> nombres de vues : {{video.nbViews}}</p>
 <p>Date d'upload : {{video.uploadDate}}</p>
 <p>categories :</p>
