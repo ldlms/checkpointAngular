@@ -10,7 +10,7 @@ export class Video {
     likes:number
     comments:Comments[]
     nbViews:string
-    uploadedDate:String
+    uploadDate:String
     categories:string[]
 
     constructor(id:number,title:string,url:string,imgSrc:string,channelName:string,likes:number,comments:Comments[],nbViews:string,uploadedDate:String,categories:string[]){
@@ -22,7 +22,7 @@ export class Video {
         this.likes = likes
         this.comments = comments
         this.nbViews = nbViews
-        this.uploadedDate = uploadedDate
+        this.uploadDate = uploadedDate
         this.categories = categories
     }
 

@@ -1,3 +1,14 @@
-<div *ngIf="video | async as video">
-<p>{{video.title}}</p>
+<div *ngIf="video | async as video" class="video-container">
+<h2>{{video.title}}</h2>
+<p>Chaine : {{video.channelName}}</p>
+<p>{{video.url}}</p>
+<img src="{{video.imgSrc}}">
+<p>LIkes : {{video.likes}}</p>
+<ul></ul>
+<p> nombres de vues : {{video.nbViews}}</p>
+<p>Date d'upload : {{video.uploadDate}}</p>
+<p>categories :</p>
+<ul *ngFor="let categorie of video.categories">
+    <p>{{categorie}}</p>
+</ul>
 </div>

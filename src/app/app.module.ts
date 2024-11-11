@@ -19,14 +19,14 @@ import { VideoDetailsComponent } from './video-details/video-details.component';
     VideoComponent,
     ErrorComponent,
     VideoListComponent,
-    VideoCardComponent,
     VideoDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    VideoSearchComponent
+    VideoSearchComponent,
+    VideoCardComponent
 ],
   providers: [],
   bootstrap: [AppComponent]

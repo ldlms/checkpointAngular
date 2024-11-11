@@ -1,10 +1,6 @@
+<div class="video-summary" [ngStyle]="{'background-color':videoLikes>=10000?'#ffcccc':'white'}">
 <p>{{videoTitle}}</p>
-<p>{{videoUrl}}</p>
-<p>
-    @for(videoComment of videoComments;track $index){
-        <p>{{videoComment.author}}</p>
-        <p>{{videoComment.content}}</p>
-    }
-</p>
+<p>{{videoChannel}}</p>
 <button (click)="goToVideo(videoId)">Lien vers la video</button>
 <hr>
+</div>

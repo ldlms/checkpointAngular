@@ -1,0 +1,27 @@
+$primary-color: #3498db;  // Bleu principal
+$text-color: #333;         // Couleur de texte sombre
+$background-color: #f5f5f5; // Fond léger
+$border-color: #e0e0e0;     // Couleur des bordures légères
+  
+  // Input de recherche
+  .styled-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    color: $text-color;
+    background-color: #fff;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+
+    &::placeholder {
+      color: lighten($text-color, 40%);
+    }
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 4px rgba(52, 152, 219, 0.3);
+    }
+  }
